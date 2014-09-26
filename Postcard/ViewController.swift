@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet var massageLabel: UILabel!
     
+    @IBOutlet weak var nameLabel: UILabel!
+    
     @IBOutlet var enterNameTextField: UITextField!
     
     @IBOutlet var enterAMassageTextField: UITextField!
@@ -39,6 +41,12 @@ class ViewController: UIViewController {
         enterAMassageTextField.resignFirstResponder()
         massageLabel.textColor = UIColor.redColor()
         mailButton.setTitle("Mail sent", forState: UIControlState.Normal)
+        nameLabel.hidden = false
+        nameLabel.text = enterNameTextField.text
+        nameLabel.textColor = UIColor .blueColor()
+        enterNameTextField.text = ""
+        enterNameTextField.resignFirstResponder()
+        
     }
 
 }
